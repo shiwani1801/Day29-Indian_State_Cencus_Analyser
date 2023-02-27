@@ -1,12 +1,10 @@
 package com.bridgelabz;
-
 import java.util.ArrayList;
-
 public class StateCSVAnalyzer {
     public static void main(String[] args) {
         CSVStateCensus stateCensus = new CSVStateCensus();
         try{
-            ArrayList<String> stateList = stateCensus.readDataFromSource();
+            ArrayList<String> stateList = stateCensus.readDataFromSource("C:\\Users\\Dell\\Desktop\\IndianCencusAnalyser\\census.csv");
             System.out.println(stateList.size());
         } catch(Exception e){
             System.out.println(e.getMessage());
