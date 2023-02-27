@@ -1,7 +1,22 @@
 package com.bridgelabz;
 
+import org.junit.jupiter.api.*;
+import org.junit.Test;
+import static org.junit.Assert.fail;
+
+import java.util.ArrayList;
 public class TestCSVStateCensus {
-    public static void main(String[] args) {
-        System.out.println(" Test class of Indian  State Cencus Analyser Program");
+    static CSVStateCensus csvStateCensus;
+    @Test
+    public void testReadDataFromDestinationHappy(){
+        csvStateCensus =  new CSVStateCensus();
+        try{
+            ArrayList<String> stateList = csvStateCensus.readDataFromSource();
+            Assertions.assertEquals(stateList.size(), 30);
+        } catch(Exception e){
+            fail("Should not throw exception");
+        }
     }
+
 }
+
