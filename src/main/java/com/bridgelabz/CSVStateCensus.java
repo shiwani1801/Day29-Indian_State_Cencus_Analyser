@@ -4,17 +4,9 @@ package com.bridgelabz;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 
-import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public class CSVStateCensus {
-
-
     public ArrayList<String> readDataFromSource(String path) throws Exception {
         ArrayList<String> stateList = new ArrayList<>();
         try{

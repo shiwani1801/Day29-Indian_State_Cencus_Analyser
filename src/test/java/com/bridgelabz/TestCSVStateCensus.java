@@ -28,6 +28,16 @@ public class TestCSVStateCensus {
             Assertions.assertNotNull(e.getMessage());
         }
     }
-
+    // Incorrect file extension
+    @Test
+    public void testReadDataFromDestinationSadWrongFormat(){
+        csvStateCensus =  new CSVStateCensus();
+        try{
+            ArrayList<String> stateList = csvStateCensus.readDataFromSource("C:\\Users\\Dell\\Desktop\\IndianCencusAnalyser\\state.txt");
+            fail("Should throw exception");
+        } catch(Exception e){
+            Assertions.assertNotNull(e.getMessage());
+        }
+    }
 
 }
